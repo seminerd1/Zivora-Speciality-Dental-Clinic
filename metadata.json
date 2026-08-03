@@ -1,0 +1,8 @@
+{
+  "name": "Zivora Speciality Dental Clinic",
+  "description": "Comprehensive dental clinic web application featuring bilingual support (English & Amharic), interactive 32-tooth digital chart, online appointment booking, and patient records portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
