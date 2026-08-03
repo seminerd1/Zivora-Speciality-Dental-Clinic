@@ -194,7 +194,7 @@ export const HeroSection = ({ onOpenBooking, introDone = true }) => {
 
             </div>
 
-            {/* RIGHT COLUMN: 3D INTERACTIVE DISPLAY STAGE WITH NEON GLOWS */}
+            {/* RIGHT COLUMN: 3D DISPLAY STAGE WITH NEON GLOWS */}
             <motion.div 
               variants={itemVariants}
               className="lg:col-span-5"
@@ -205,13 +205,10 @@ export const HeroSection = ({ onOpenBooking, introDone = true }) => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/25 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700" />
 
                 {/* Top Badge Overlay */}
-                <div className="w-full flex items-center justify-between z-10">
+                <div className="w-full flex items-center justify-start z-10">
                   <span className="px-3.5 py-1 bg-slate-950/90 border border-sky-400/50 text-[10px] font-mono font-bold uppercase tracking-wider text-cyan-300 rounded-full shadow-[0_0_15px_rgba(56,189,248,0.3)] flex items-center gap-2">
                     <Sparkles className="w-3.5 h-3.5 text-cyan-300" />
                     <span>3D Radiography Scan</span>
-                  </span>
-                  <span className="px-3 py-1 bg-sky-500/20 border border-sky-400/40 text-[10px] font-mono font-bold text-sky-300 rounded-full shadow-[0_0_10px_rgba(56,189,248,0.2)]">
-                    Interactive 3D 🔄
                   </span>
                 </div>
 
