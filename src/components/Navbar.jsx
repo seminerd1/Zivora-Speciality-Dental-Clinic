@@ -37,8 +37,8 @@ export const Navbar = ({ onOpenBooking, activeSection, setActiveSection }) => {
       <div
         className={`max-w-7xl mx-auto rounded-2xl sm:rounded-3xl transition-all duration-500 border ${
           scrolled
-            ? 'bg-white/90 backdrop-blur-xl border-[#bae6fd] shadow-[0_12px_35px_rgba(2,132,199,0.12)] py-2.5 px-4 sm:px-6'
-            : 'bg-[#f0f9ff]/85 backdrop-blur-md border-[#7dd3fc]/60 shadow-lg py-3.5 px-4 sm:px-6'
+            ? 'bg-[#070e1c]/90 backdrop-blur-xl border-sky-500/30 shadow-[0_12px_35px_rgba(2,132,199,0.25)] py-2.5 px-4 sm:px-6'
+            : 'bg-[#070e1c]/75 backdrop-blur-md border-sky-500/20 shadow-lg py-3.5 px-4 sm:px-6'
         }`}
       >
         <div className="flex items-center justify-between gap-3">
@@ -51,31 +51,31 @@ export const Navbar = ({ onOpenBooking, activeSection, setActiveSection }) => {
             <img 
               src={logoImg} 
               alt="Zivora Logo" 
-              className="w-9 h-9 sm:w-10 sm:h-10 object-cover rounded-xl sm:rounded-2xl border border-[#7dd3fc] shadow-[0_4px_16px_rgba(2,132,199,0.35)] group-hover:scale-105 transition-all"
+              className="w-9 h-9 sm:w-10 sm:h-10 object-cover rounded-xl sm:rounded-2xl border border-sky-400/50 shadow-[0_4px_16px_rgba(56,189,248,0.35)] group-hover:scale-105 transition-all"
               referrerPolicy="no-referrer"
             />
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="editorial-serif text-lg sm:text-2xl font-normal text-[#0f172a] tracking-wider block leading-none group-hover:text-[#0284c7] transition-colors">
+                <span className="editorial-serif text-lg sm:text-2xl font-normal text-slate-100 tracking-wider block leading-none group-hover:text-cyan-300 transition-colors">
                   {t('brandName')}
                 </span>
               </div>
-              <span className="text-[8px] sm:text-[9.5px] font-mono tracking-[0.2em] sm:tracking-[0.28em] text-[#0284c7] uppercase font-bold block mt-0.5">
+              <span className="text-[8px] sm:text-[9.5px] font-mono tracking-[0.2em] sm:tracking-[0.28em] text-cyan-400 uppercase font-bold block mt-0.5">
                 {t('brandSub')}
               </span>
             </div>
           </button>
 
           {/* Floating Pill Navigation Menu (Desktop) */}
-          <nav className="hidden lg:flex items-center bg-white/80 border border-[#bae6fd] rounded-full px-5 py-1.5 gap-6 xl:gap-8 shadow-sm">
+          <nav className="hidden lg:flex items-center bg-slate-950/60 border border-sky-500/30 rounded-full px-5 py-1.5 gap-6 xl:gap-8 shadow-sm">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-xs uppercase tracking-[0.16em] font-semibold transition-all cursor-pointer py-1 text-[#334155] hover:text-[#0284c7] relative group"
+                className="text-xs uppercase tracking-[0.16em] font-semibold transition-all cursor-pointer py-1 text-slate-300 hover:text-cyan-300 relative group"
               >
                 <span>{link.label}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#0284c7] to-[#38bdf8] group-hover:w-full transition-all duration-300 rounded-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-sky-400 to-cyan-300 group-hover:w-full transition-all duration-300 rounded-full" />
               </button>
             ))}
           </nav>
@@ -85,11 +85,11 @@ export const Navbar = ({ onOpenBooking, activeSection, setActiveSection }) => {
             {/* Language Toggle Pill */}
             <button
               onClick={toggleLang}
-              className="flex items-center gap-2 px-3.5 py-2 border border-[#bae6fd] hover:border-[#0284c7] text-xs font-mono bg-white hover:bg-[#e0f2fe] text-[#0f172a] transition-all cursor-pointer rounded-xl active:scale-95 shadow-sm group"
+              className="flex items-center gap-2 px-3.5 py-2 border border-sky-500/30 hover:border-cyan-400 text-xs font-mono bg-slate-950/80 hover:bg-sky-950/60 text-sky-200 transition-all cursor-pointer rounded-xl active:scale-95 shadow-sm group"
               title="Switch Language (ENG / AMH)"
               aria-label="Toggle language"
             >
-              <Globe className="w-3.5 h-3.5 text-[#0284c7] group-hover:rotate-45 transition-transform duration-500" />
+              <Globe className="w-3.5 h-3.5 text-cyan-400 group-hover:rotate-45 transition-transform duration-500" />
               <span className="font-mono text-xs font-bold tracking-wider">
                 {lang === 'en' ? 'AMH' : 'ENG'}
               </span>
@@ -98,11 +98,11 @@ export const Navbar = ({ onOpenBooking, activeSection, setActiveSection }) => {
             {/* Book Appointment Pill CTA */}
             <button
               onClick={onOpenBooking}
-              className="relative group overflow-hidden flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#0284c7] via-[#0369a1] to-[#0ea5e9] hover:from-[#0f172a] hover:to-[#1e293b] text-white text-xs font-bold uppercase tracking-[0.16em] transition-all cursor-pointer rounded-xl shadow-[0_4px_20px_rgba(2,132,199,0.3)] active:scale-95"
+              className="relative group overflow-hidden flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-sky-500 via-cyan-400 to-blue-600 hover:from-sky-400 hover:to-cyan-400 text-slate-950 text-xs font-extrabold uppercase tracking-[0.16em] transition-all cursor-pointer rounded-xl shadow-[0_0_20px_rgba(56,189,248,0.5)] active:scale-95"
             >
-              <Calendar className="w-4 h-4 text-white" />
+              <Calendar className="w-4 h-4 text-slate-950" />
               <span>{t('navBook')}</span>
-              <Sparkles className="w-3.5 h-3.5 text-sky-200 animate-pulse" />
+              <Sparkles className="w-3.5 h-3.5 text-slate-950 animate-pulse" />
             </button>
           </div>
 
@@ -112,10 +112,10 @@ export const Navbar = ({ onOpenBooking, activeSection, setActiveSection }) => {
             {/* Mobile Language Switcher */}
             <button
               onClick={toggleLang}
-              className="flex items-center gap-1.5 px-3 py-1.5 border border-[#bae6fd] bg-white text-xs font-mono text-[#0f172a] rounded-xl shadow-sm cursor-pointer active:scale-95 min-h-[38px]"
+              className="flex items-center gap-1.5 px-3 py-1.5 border border-sky-500/30 bg-slate-950/80 text-xs font-mono text-slate-100 rounded-xl shadow-sm cursor-pointer active:scale-95 min-h-[38px]"
               aria-label="Toggle language"
             >
-              <Globe className="w-3.5 h-3.5 text-[#0284c7]" />
+              <Globe className="w-3.5 h-3.5 text-cyan-400" />
               <span className="font-mono text-xs font-bold tracking-wider">
                 {lang === 'en' ? 'AMH' : 'ENG'}
               </span>
@@ -124,10 +124,10 @@ export const Navbar = ({ onOpenBooking, activeSection, setActiveSection }) => {
             {/* Mobile Menu Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#0f172a] hover:text-[#0284c7] focus:outline-none cursor-pointer rounded-xl border border-[#bae6fd] bg-white transition-colors min-h-[38px] min-w-[38px] flex items-center justify-center shadow-sm"
+              className="p-2 text-slate-100 hover:text-cyan-300 focus:outline-none cursor-pointer rounded-xl border border-sky-500/30 bg-slate-950/80 transition-colors min-h-[38px] min-w-[38px] flex items-center justify-center shadow-sm"
               aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5 text-[#0284c7]" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 text-cyan-400" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
 
@@ -135,19 +135,19 @@ export const Navbar = ({ onOpenBooking, activeSection, setActiveSection }) => {
 
         {/* Mobile & Tablet Slide-Down Drawer Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-3 pt-4 border-t border-[#bae6fd] space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
+          <div className="lg:hidden mt-3 pt-4 border-t border-sky-500/30 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
             
             {/* Mobile Drawer Language Switcher Bar */}
-            <div className="flex items-center justify-between p-3 bg-white border border-[#bae6fd] rounded-xl">
+            <div className="flex items-center justify-between p-3 bg-slate-950/80 border border-sky-500/30 rounded-xl">
               <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-[#0284c7]" />
-                <span className="text-xs font-mono uppercase tracking-wider text-[#475569]">
+                <Globe className="w-4 h-4 text-cyan-400" />
+                <span className="text-xs font-mono uppercase tracking-wider text-slate-300">
                   {lang === 'en' ? 'Language' : 'ቋንቋ'}
                 </span>
               </div>
               <button
                 onClick={toggleLang}
-                className="flex items-center gap-2 px-3 py-1.5 bg-[#e0f2fe] hover:bg-[#0284c7] hover:text-white border border-[#0284c7]/30 text-xs font-mono font-bold text-[#0f172a] rounded-lg transition-all cursor-pointer active:scale-95"
+                className="flex items-center gap-2 px-3 py-1.5 bg-sky-500/20 hover:bg-cyan-500/30 border border-sky-400/30 text-xs font-mono font-bold text-sky-200 rounded-lg transition-all cursor-pointer active:scale-95"
               >
                 <span className="font-mono text-xs font-bold tracking-wider">
                   {lang === 'en' ? 'AMH' : 'ENG'}
@@ -161,7 +161,7 @@ export const Navbar = ({ onOpenBooking, activeSection, setActiveSection }) => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-left text-xs uppercase tracking-wider py-3 px-4 rounded-xl transition-all flex items-center justify-between font-semibold text-[#334155] hover:text-[#0284c7] hover:bg-[#e0f2fe]"
+                  className="text-left text-xs uppercase tracking-wider py-3 px-4 rounded-xl transition-all flex items-center justify-between font-semibold text-slate-300 hover:text-cyan-300 hover:bg-sky-950/50"
                 >
                   <span>{link.label}</span>
                 </button>
@@ -175,7 +175,7 @@ export const Navbar = ({ onOpenBooking, activeSection, setActiveSection }) => {
                   setMobileMenuOpen(false);
                   onOpenBooking();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3.5 bg-gradient-to-r from-[#0284c7] via-[#0369a1] to-[#0ea5e9] text-white text-xs font-bold uppercase tracking-[0.16em] transition-all cursor-pointer rounded-xl shadow-lg min-h-[44px]"
+                className="w-full flex items-center justify-center gap-2 py-3.5 bg-gradient-to-r from-sky-500 via-cyan-400 to-blue-600 text-slate-950 text-xs font-extrabold uppercase tracking-[0.16em] transition-all cursor-pointer rounded-xl shadow-lg min-h-[44px]"
               >
                 <Calendar className="w-4 h-4" />
                 <span>{t('navBook')}</span>
