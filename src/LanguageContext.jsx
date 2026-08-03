@@ -168,6 +168,24 @@ export const translations = {
     s8Item3: 'Minor Oral Surgery',
     s8Item4: 'Infection Management',
 
+    // Highlights (NEW)
+    hUltrasonic: 'Ultrasonic Scaling',
+    hPolishing: 'Polishing & Fluoride',
+    hDigitalScan: 'Intraoral Digital Scan',
+    hOralExams: 'Oral Health Exams',
+    hLaserWhitening: 'Laser Teeth Whitening',
+    hPorcelainVeneers: 'Porcelain Veneers',
+    hCosmeticBonding: 'Cosmetic Bonding',
+    hContouring: 'Tooth Contouring',
+    hClearAligners: 'Clear Aligners',
+    hBiteCorrection: 'Complex Bite Correction',
+    hPedAdultAlign: 'Pediatric & Adult Alignment',
+    hEnhancedAesthetics: 'Enhanced Aesthetics',
+    hMicroEndo: 'Micro-Endodontics',
+    hTitaniumImplants: 'Titanium Implants',
+    hPreservation: 'Tooth Preservation',
+    hInstantRelief: 'Instant Relief',
+
     // Patient Experience
     expTag: 'Our Patient Experience',
     expTitle: 'Your Comfort Matters',
@@ -446,6 +464,24 @@ export const translations = {
     s8Item2: 'የቀዶ ሕክምና ጥርስ ማውጣት',
     s8Item3: 'አነስተኛ የአፍ ቀዶ ሕክምናዎች',
     s8Item4: 'የኢንፌክሽን ሕክምናና ቁጥጥር',
+
+    // Highlights (NEW - Amharic)
+    hUltrasonic: 'አልትራሶኒክ ስኬሊንግ (Ultrasonic Scaling)',
+    hPolishing: 'ፖሊሺንግ እና ፍሎራይድ',
+    hDigitalScan: 'ዲጂታል የአፍ ውስጥ ስካን',
+    hOralExams: 'የአፍና የጥርስ ጤና ምርመራ',
+    hLaserWhitening: 'የሌዘር ጥርስ ማንጣት',
+    hPorcelainVeneers: 'ፖርሲሌን ቬኒርስ (Veneers)',
+    hCosmeticBonding: 'ኮስሞቲክ ቦንዲንግ',
+    hContouring: 'የጥርስ ቅርፅ ማስተካከያ',
+    hClearAligners: 'ግልጽ የጥርስ ማስተካከያዎች (Clear Aligners)',
+    hBiteCorrection: 'ውስብስብ የንክሻ ማስተካከያ',
+    hPedAdultAlign: 'የሕፃናትና አዋቂዎች ጥርስ አሰላለፍ',
+    hEnhancedAesthetics: 'የተሻሻለ ውበት',
+    hMicroEndo: 'ማይክሮ-ኢንዶዶንቲክስ',
+    hTitaniumImplants: 'የቲታኒየም ጥርስ ተከላ',
+    hPreservation: 'ተፈጥሮአዊ ጥርስን ጠብቆ ማቆየት',
+    hInstantRelief: 'ፈጣን የህመም ማስታገሻ',
 
     // Patient Experience
     expTag: 'የታካሚዎቻችን አስተናገድ',

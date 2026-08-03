@@ -14,7 +14,8 @@ export const ServicesSection = ({ onOpenBooking }) => {
       descKey: 's1Desc',
       badge: 'ROUTINE & DIAGNOSTIC CARE',
       priceEstimate: 'Consultation & Cleaning',
-      highlights: ['Ultrasonic Scaling', 'Polishing & Fluoride', 'Intraoral Digital Scan', 'Oral Health Exams'],
+      // These must match the keys we added to LanguageContext
+      highlights: ['hUltrasonic', 'hPolishing', 'hDigitalScan', 'hOralExams'],
       accentColor: 'border-[#0284c7] bg-gradient-to-r from-[#e0f2fe] via-white to-[#e0f2fe]',
     },
     {
@@ -24,7 +25,7 @@ export const ServicesSection = ({ onOpenBooking }) => {
       descKey: 's3Desc',
       badge: 'POPULAR • SMILE TRANSFORM',
       priceEstimate: 'Veneers, Whitening & Makeovers',
-      highlights: ['Laser Teeth Whitening', 'Porcelain Veneers', 'Cosmetic Bonding', 'Tooth Contouring'],
+      highlights: ['hLaserWhitening', 'hPorcelainVeneers', 'hCosmeticBonding', 'hContouring'],
       accentColor: 'border-[#0284c7] bg-gradient-to-r from-[#e0f2fe] via-white to-[#e0f2fe]',
     },
     {
@@ -34,7 +35,7 @@ export const ServicesSection = ({ onOpenBooking }) => {
       descKey: 's4Desc',
       badge: 'ALIGNMENT & BITE CORRECTION',
       priceEstimate: 'Clear & Standard Braces',
-      highlights: ['Clear Aligners', 'Complex Bite Correction', 'Pediatric & Adult Alignment', 'Enhanced Aesthetics'],
+      highlights: ['hClearAligners', 'hBiteCorrection', 'hPedAdultAlign', 'hEnhancedAesthetics'],
       accentColor: 'border-[#0284c7] bg-gradient-to-r from-[#e0f2fe] via-white to-[#e0f2fe]',
     },
     {
@@ -44,7 +45,7 @@ export const ServicesSection = ({ onOpenBooking }) => {
       descKey: 's6Desc',
       badge: 'PAIN-FREE SURGERY & PULP',
       priceEstimate: 'Root Canal & Implants',
-      highlights: ['Micro-Endodontics', 'Titanium Implants', 'Tooth Preservation', 'Instant Relief'],
+      highlights: ['hMicroEndo', 'hTitaniumImplants', 'hPreservation', 'hInstantRelief'],
       accentColor: 'border-[#0284c7] bg-gradient-to-r from-[#e0f2fe] via-white to-[#e0f2fe]',
     },
   ];
@@ -94,12 +95,13 @@ export const ServicesSection = ({ onOpenBooking }) => {
                   </p>
                 </div>
 
-                {/* Highlights Grid */}
+                {/* Highlights Grid - UPDATED TO USE t() */}
                 <div className="pt-2 grid grid-cols-2 gap-2.5 border-t border-[#bae6fd]/60 text-xs font-mono text-[#334155]">
                   {service.highlights.map((h, i) => (
                     <div key={i} className="flex items-center gap-2 bg-white/80 p-2 rounded-xl border border-[#bae6fd]">
                       <Check className="w-3.5 h-3.5 text-[#0284c7] shrink-0" />
-                      <span className="truncate">{h}</span>
+                      {/* This line t(h) converts the key into the translated text */}
+                      <span className="truncate">{t(h)}</span>
                     </div>
                   ))}
                 </div>
@@ -156,4 +158,3 @@ export const ServicesSection = ({ onOpenBooking }) => {
     </section>
   );
 };
-
